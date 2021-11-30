@@ -9,6 +9,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
     rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="./css/styles.css" />
 </head>
 
@@ -23,9 +24,12 @@
         </a>
 
         <ul class="nav list">
-          <li><a class="nav-link link" href="./index.html">Студия</a></li>
           <li>
-            <a class="nav-link link" href="./portfolio.html">Портфолио</a>
+            <a class="nav-link active link" href="./index.html">Студия
+            </a>
+          </li>
+          <li>
+            <a class="nav-link link " href="./portfolio.html">Портфолио</a>
           </li>
           <li><a class="nav-link link" href="Контакты">Контакты</a></li>
         </ul>
@@ -61,7 +65,7 @@
           Эффективные решения <br />
           для вашего бизнеса
         </h1>
-        <button class="hero-btn" type="button">Заказать услугу</button>
+        <button class="hero-btn" type="button" data-modal-open>Заказать услугу</button>
       </section>
     </div>
 
@@ -129,9 +133,24 @@
       <div class="container">
         <h2 class="subject">Чем мы занимаемся</h2>
         <li class="list subject-work">
+          <div class="subject-wrapp">
           <img src="./images/img.jpg" alt="work work at destop" width="370" height="294" />
+          <p class="subject-work-text">
+            Десктопные приложения
+          </p>
+          </div>
+          <div class="subject-wrapp">
           <img src="./images/img(1).jpg" alt="work at laptop" width="370" height="294" />
+          <p class="subject-work-text">
+            Мобильные приложения
+          </p>
+          </div>
+          <div class="subject-wrapp">
           <img src="./images/img(2).jpg" alt="work at tablet" width="370" height="294" />
+          <p class="subject-work-text">
+            Дизайнерские решения
+          </p>
+          </div>
         </li>
       </div>
     </section>
@@ -397,6 +416,20 @@
       </div>
     </div>
   </footer>
+
+  <!-------------------------Модалка------------------------->
+
+  
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <button type="button" class="modal-close" data-modal-close>
+        <svg class="modal-close-icon" with="18" height="18">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <script src="./js/modal.js"></script>
 </body>
 
 </html>
